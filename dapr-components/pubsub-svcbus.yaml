@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub-servicebus
+spec:
+  type: pubsub.azure.servicebus
+  version: v1
+  metadata:
+  - name: consumerID
+    value: "shipments-processor-subscription"   
+  - name: connectionString # Required when not using Azure Authentication.
+    value: "<Value here>"
+scopes:
+- shipments-backend-processor

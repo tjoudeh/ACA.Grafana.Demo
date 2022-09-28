@@ -1,0 +1,16 @@
+componentType: state.azure.tablestorage
+version: v1
+metadata:
+- name: accountName
+  value: "shipmentstore"
+- name: accountKey
+  secretRef: storagekey
+- name: tableName
+  value: "shipments"
+- name: cosmosDbMode
+  value: false
+secrets:
+- name: storagekey
+  value: "<Value here>"
+scopes:
+- shipments-backend-processor
